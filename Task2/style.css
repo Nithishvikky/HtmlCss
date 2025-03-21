@@ -2,7 +2,6 @@
 
 *{
     box-sizing: border-box;  /*Ensures consistent element sizing.*/
-    margin: 0; /*Removes unpredictable browser styling.*/
 }
 
 body{
