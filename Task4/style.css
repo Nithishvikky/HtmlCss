@@ -26,7 +26,6 @@ header .navbar ul li{
      float: left;
 }
 
-
 header .navbar ul li a,#Menu1,#Menu2,#Nestedmenu{
     display: block;
     padding: 20px;
@@ -41,7 +40,6 @@ header .navbar ul li a:hover ,#Menu1:hover,#Menu2:hover,#Nestedmenu:hover{
 /* Here I used opacity and visibility instead of "display:none" because transistion won't work display property*/
 header .navbar ul li ul{
     position: absolute;
-    left: 0;
     width: 200px;
     opacity: 0;
     visibility: hidden;
@@ -63,7 +61,6 @@ header .navbar ul li ul li ul{
     top: 0;
 }
 
-header .navbar ul li:focus-within >ul,
 header .navbar ul li:hover >ul{
     opacity: 1;
     visibility: visible;
@@ -110,7 +107,7 @@ input,#icon{
     }
     /* Nested menu */
     header .navbar ul li ul li ul{
-         display: none;
+          display: none;
           width: 100%;
           left: 0;
     }
@@ -118,10 +115,12 @@ input,#icon{
     /* If menubar label checked/clicked it will be initialized in its default place */
     #menu-bar:checked ~ .navbar,
     #menu1:checked ~ .submenu1,
-    #menu2:checked ~ .submenu2{
-        display: block;
-    }
+    #menu2:checked ~ .submenu2,
     #nestedmenu:checked ~ .nestedmenu-list{
         display: block;
+        visibility: visible;
+        opacity: 1;
+        transition: none;
+        transform: none;
     }
 }
