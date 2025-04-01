@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    display: none;
+}
+
+label{
+    cursor: pointer;
+    background-color: darkgray;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+label:hover{
+    background-color: gray;
+}
+
+.container{
+    margin-top: 20px;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    max-height: 0;  /*Used this trick for the collapes and expansion*/
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.8)translateY(-10px);
+    transition: transform 0.3s ease;
+}
+
+#cnt-1:checked ~ .content-1,
+#cnt-2:checked ~ .content-2,
+#cnt-3:checked ~ .content-3{
+    margin: 10px 0;
+    max-height: fit-content; /*Used this trick for the collapes and expansion*/
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1.0)translateY(0px);
+}
